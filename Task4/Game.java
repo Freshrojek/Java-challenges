@@ -6,7 +6,7 @@ public class Game {
   public static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
   // The random number generator used throughout
-  public static RandomInterface r;//=new LinearCongruentialGenerator();
+  public static RandomInterface r =new LinearCongruentialGenerator();
   
   // Variable(s) used in the card game methods
   public static ArrayList<String> cardList;
