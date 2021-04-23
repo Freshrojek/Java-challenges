@@ -22,11 +22,11 @@ private int updateCount=0;
 private int val=0;
 
 private Example() { }
-public static Example getInstance() {
+public synchronized static Example getInstance() {
 	if (myInstance == null) {myInstance = new Example();}
 	return myInstance;
 }
-public void setVal(int aVal) { val=aVal; updateCount++; }
-public int getVal() { return val; }
-public int getUpdateCount() { return updateCount; }
+public synchronized void setVal(int aVal) { val=aVal; updateCount++; }
+public synchronized int getVal() { return val; }
+public synchronized int getUpdateCount() { return updateCount; }
 }
