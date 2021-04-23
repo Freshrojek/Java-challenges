@@ -2,7 +2,7 @@ public class DiningPhilosophers {
 
     public static void main(String[] args) throws Exception {
 
-        Philosopher[] philosophers = new Philosopher[5];
+        Philosopher[] philosophers = new Philosopher[3];
         Object[] forks = new Object[philosophers.length];
 
         for (int i = 0; i < forks.length; i++) {
@@ -12,9 +12,14 @@ public class DiningPhilosophers {
         for (int i = 0; i < philosophers.length; i++) {
             Object leftFork = forks[i];
             Object rightFork = forks[(i + 1) % forks.length];
+            if(i == 0) {
+                philosophers[i] = new Philosopher(rightFork, leftFork );
+            }
+            else{
+                philosophers[i] = new Philosopher(leftFork, rightFork);
+            }
 
-            philosophers[i] = new Philosopher(leftFork, rightFork);
-            
+
             Thread t = new Thread(philosophers[i], "Philosopher " + (i + 1));
             t.start();
         }
