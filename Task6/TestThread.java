@@ -17,9 +17,9 @@ public static void main(String[] args) throws java.lang.InterruptedException {
 	}
 }
 class Example {
-private static Example myInstance;
-private int updateCount=0;
-private int val=0;
+private volatile static Example myInstance;
+private volatile int updateCount=0;
+private volatile int val=0;
 
 private Example() { }
 public synchronized static Example getInstance() {
