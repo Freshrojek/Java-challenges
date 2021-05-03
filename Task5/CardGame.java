@@ -29,8 +29,7 @@ public class CardGame implements GameInterface {
         declareWinner();
 
     }
-    @Override
-    public void Initialise() {
+    private void Initialise() {
         // The initialisation phase:
 
         // Create a list of cards ... and shuffle them

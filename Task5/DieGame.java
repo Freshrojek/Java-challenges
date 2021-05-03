@@ -14,7 +14,7 @@ public class DieGame implements GameInterface {
         // Play card game:
 
         // Initialise the game
-        Initialise();
+//        Initialise();
 
         // Play the main game phase
         main();
@@ -23,12 +23,12 @@ public class DieGame implements GameInterface {
         declareWinner();
     }
 
-    @Override
-    public void Initialise() {
-        // The initialisation phase:
-
-        // Actually there isn't anything to do here
-    }
+//    @Override
+//    public void Initialise() {
+//        // The initialisation phase:
+//
+//        // Actually there isn't anything to do here
+//    }
 
     @Override
     public void main() {
