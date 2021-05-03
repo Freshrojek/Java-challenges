@@ -29,7 +29,7 @@ public class LinearCongruentialGenerator implements RandomInterface  {
 
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
   // Just a little bit of test code, to illustrate use of this class.
     RandomInterface r=new LinearCongruentialGenerator();
     for (int i=0; i<10; i++) System.out.println(r.next());
