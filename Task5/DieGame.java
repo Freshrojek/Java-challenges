@@ -17,9 +17,6 @@ public class DieGame implements GameInterface {
     public void play() {
         // Play card game:
 
-        // Initialise the game
-//        Initialise();
-
         // Play the main game phase
         main();
 
