@@ -16,13 +16,17 @@ public static void main(String[] args) throws java.lang.InterruptedException {
 			e.getUpdateCount() + " time(s)");
 	}
 }
+//Initalise an Example safely so nothing can access it before it is initialised
+//make the initialisation of variables volatile
+//synchronise methods to make methods thread safe
+
 class Example {
-private volatile static Example myInstance;
+private volatile static Example myInstance = new Example();
 private volatile int updateCount=0;
 private volatile int val=0;
 
 private Example() { }
-public synchronized static Example getInstance() {
+public static Example getInstance() {
 	if (myInstance == null) {myInstance = new Example();}
 	return myInstance;
 }
