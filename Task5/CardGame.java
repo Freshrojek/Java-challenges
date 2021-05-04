@@ -6,7 +6,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class CardGame implements GameInterface {
-    // The BufferedReader used throughout
+    // The Card Game class where all the information about the Card Game is and where it runs.
+    // This implements the methods from GameInterface to remove duplication of code between game classes
+    //It also eradicates bad code smells
+
+    // The BufferedReader used throughout the Card Game
     public static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
     // The random number generator used throughout
@@ -21,7 +25,7 @@ public class CardGame implements GameInterface {
 
         // Initialise the game
         Initialise();
-
+        //This game needs initialising, therefore it is a local method rather than implemented
         // Play the main game phase
         main();
 
@@ -70,6 +74,7 @@ public class CardGame implements GameInterface {
         // Let user select two cards from the pack
         for (int i=0; i<2; i++) {
             System.out.println("Hit <RETURN> to choose a card");
+            // Catch the line with an Exception if the input is not as expected
             try {
                 br.readLine();
             } catch (IOException e) {

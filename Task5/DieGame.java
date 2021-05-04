@@ -4,7 +4,11 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 
 public class DieGame implements GameInterface {
-    // The random number generator used throughout
+    // The Die Game class where all the information about the Die Game is and where it runs.
+    // This implements the methods from GameInterface to remove duplication of code between game classes
+    //It also eradicates bad code smells
+
+    // The random number generator used throughout the Die Game
     public static RandomInterface r =new LinearCongruentialGenerator();
     //Variable(s) used in the die game methods
     public static HashSet<Integer> numbersRolled=new HashSet<Integer>();
@@ -39,6 +43,7 @@ public class DieGame implements GameInterface {
         // Let the user roll the die twice
         for (int i = 0; i < 2; i++) {
             System.out.println("Hit <RETURN> to roll the die");
+            // Catch the line with an Exception if the input is not as expected
             try {
                 br.readLine();
             } catch (IOException e) {
