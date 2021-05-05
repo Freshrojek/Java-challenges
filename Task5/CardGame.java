@@ -10,9 +10,6 @@ public class CardGame implements GameInterface {
     // This implements the methods from GameInterface to remove duplication of code between game classes
     //It also eradicates bad code smells
 
-    // The BufferedReader used throughout the Card Game
-    public static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-
     // The random number generator used throughout
     public static RandomInterface r =new LinearCongruentialGenerator();
 
